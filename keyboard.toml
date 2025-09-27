@@ -1,22 +1,22 @@
 # Documentation: https://haobogu.github.io/rmk/keyboard_configuration.html
 [keyboard]
-name = "RMK Keyboard"
-product_name = "RMK Keyboard"
+name = "EPPAD"
+product_name = "EPPAD"
 vendor_id = 0x4c4b
 product_id = 0x4643
-manufacturer = "haobo"
-chip = "rp2040"
+manufacturer = "HAVIS"
+chip = "nrf52840"
 
 [matrix]
 # Input and output pins are mandatory
-input_pins = ["PIN_6", "PIN_7", "PIN_8", "PIN_9"]
-output_pins = ["PIN_19", "PIN_20", "PIN_21"]
+input_pins = ["PIN_6", "PIN_8", "PIN_17", "PIN_20"]
+output_pins = ["PIN_31", "PIN_29", "PIN_2", "PIN_15", "PIN_13", "PIN_11", "PIN_10", "PIN_9"]
 # WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
 # row2col = true
 
 [layout]
 rows = 4
-cols = 3
+cols = 8
 layers = 2
 keymap = [
     [
