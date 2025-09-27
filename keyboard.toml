@@ -7,12 +7,14 @@ product_id = 0x4643
 manufacturer = "HAVIS"
 chip = "nrf52840"
 
+enabled = true[ble]
+
 [matrix]
 # Input and output pins are mandatory
 input_pins = ["PIN_6", "PIN_8", "PIN_17", "PIN_20"]
 output_pins = ["PIN_31", "PIN_29", "PIN_2", "PIN_15", "PIN_13", "PIN_11", "PIN_10", "PIN_9"]
 # WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
-# row2col = true
+# col2row = true
 
 [layout]
 rows = 4
@@ -20,28 +22,50 @@ cols = 8
 layers = 2
 keymap = [
     [
-        ["A", "B", "C"],
-        ["Kc1", "Kc2", "Kc3"],
-        ["LCtrl", "MO(1)", "LShift"],
-        ["OSL(1)", "LT(2, Kc9)", "LM(1, LShift | LGui)"]
+        ["_", "_", "_", "U", "I", "O", "P", "Escape"],
+        ["_", "_", "_", "H", "J", "K", "L", "F5"],
+        ["Left", "Down", "Right", "B", "N", "M", "Z", "X"],
+        ["_", "_", "Up", "MO(1)", "Space", "_", "_", "_"]
     ],
     [
-        ["_", "TT(1)", "TG(2)"],
-        ["_", "_", "_"],
-        ["_", "_", "_"],
-        ["_", "_", "_"]
+        ["_", "_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_", "_"]
     ],
 ]
+
+[[input_device.encoder]]
+pin_a = "P0_24"
+pin_b = "P0_11"
+
+# Whether to use the MCU's internal pull-up resistor, default to false
+internal_pullup = false
+
+# Phase is the working mode of the rotary encoders.
+# Available mode:
+# - default: EC11 compatible, resolution = 1
+# - e8h7: resolution = 2, reverse = true
+# - resolution: customized resolution, the resolution value and reverse should be specified later
+phase = "default"
+
+# The resolution represents how many pulses the encoder generates per detent.
+# For examples, if your rotary encoder has 30 detents in total and generates 15 pulses per 360 degree rotation, then the resolution = 30/15 = 2.
+# Number of detents and number of pulses can be found in your encoder's datasheet
+resolution = 2
+
+# Whether the direction of the rotary encoder is reversed.
+reverse = false
 
 [light]
 # All light pins are high-active by default, uncomment if you want it to be low-active
 # capslock.pin = "PB2"
-# capslock.low_active = true
+# capslock.low_active = false
 # scrolllock.pin = "PA3"
-# scrolllock.low_active = true
+# scrolllock.low_active = false
 # Just ignore if no light pin is used for it
 # numslock.pin = "PA5"
-# numslock.low_active = true
+# numslock.low_active = false
 
 
 
