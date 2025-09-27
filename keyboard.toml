@@ -5,17 +5,15 @@ product_name = "EPPAD"
 vendor_id = 0x4c4b
 product_id = 0x4643
 manufacturer = "haobo"
-chip = "nrf52840"
+board = "nice!nano_v2"  # Pre-configured board
 
-[ble]
-enabled = true
 
 [matrix]
 # Input and output pins are mandatory
 input_pins = ["PIN_6", "PIN_8", "PIN_17", "PIN_20"]
 output_pins = ["PIN_31", "PIN_29", "PIN_2", "PIN_15", "PIN_13", "PIN_11", "PIN_10", "PIN_9"]
 # WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
-row2col = false
+#row2col = true
 
 [layout]
 rows = 4
@@ -71,6 +69,9 @@ resolution = 2
 
 # Whether the direction of the rotary encoder is reversed.
 reverse = false
+
+[ble]
+enabled = true
 
 [light]
 # All light pins are high-active by default, uncomment if you want it to be low-active
