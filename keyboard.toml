@@ -31,21 +31,20 @@ matrix_map = """
 [[layer]]
 name = "base_layer" #optional name for the layer
 keys = """
-__ __ __ U I O P Escape
-__ __ __ H J K L F5
+Q W E U I O P Escape
+A S D H J K L F5
 Left Down Right B N M Z X
-__ __ Up MO(1) Space __ __ __
+C V Up MO(1) Space F G T
 """
 
 # layer 1:
 [[layer]]
 name = "fn_layer" #optional name for the layer
 keys = """
-__ __ __ __ __ __ __ __
-__ __ __ __ __ __ __ __
-__ __ __ __ __ __ __ __
-__ __ __ __ __ __ __ __
-__ __ __ __ __ __ __ __
+Q W E U I O P Escape
+A S D H J K L F5
+Left Down Right B N M Z X
+C V Up T Space F G T
 """
 
 [[input_device.encoder]]
