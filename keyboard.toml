@@ -5,13 +5,13 @@ product_name = "EPPAD"
 vendor_id = 0x4c4b
 product_id = 0x4643
 manufacturer = "haobo"
-board = "nice!nano_v2"  # Pre-configured board
+chip = "nrf52840"  # Direct chip specification
 
 
 [matrix]
 # Input and output pins are mandatory
-input_pins = ["PIN_6", "PIN_8", "PIN_17", "PIN_20"]
-output_pins = ["PIN_31", "PIN_29", "PIN_2", "PIN_15", "PIN_13", "PIN_11", "PIN_10", "PIN_9"]
+input_pins = ["P0_00", "P0_01", "P0_04", "P0_05", "P0_07", "P0_08", "P0_11", "P0_12"]
+output_pins = ["P1_28", "P1_29", "P1_30", "P1_31"]
 # WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
 #row2col = true
 
